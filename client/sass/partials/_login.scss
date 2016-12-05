@@ -1,0 +1,56 @@
+@import '../mixins/mixins';
+@import '../modules/variables';
+
+
+.fullscreen-bg__video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1000;
+    width: 100%;
+
+    @media #{$mq-xs, $mq-sm} {
+        display: none;
+    }
+}
+
+.login_body {
+
+    @include vertical-center-flex(100vh);
+
+    .other {
+        display: none;
+
+        @media #{$mq-lg, $mq-xlg} {
+            display: block;
+        }
+    }
+
+    #login {
+        background: $dark-navy;
+        opacity: .65;
+        padding: 15px;
+        margin-top: 20px;
+
+        @media #{$mq-xs, $mq-sm} {
+            opacity: 100;
+        }
+
+        .tagline {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        a {
+            @include whiteButton($white, $navy);
+        }
+
+        form {
+            button {
+                @include whiteButton($white, $navy);
+            }
+        }
+    }
+}

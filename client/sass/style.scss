@@ -1,0 +1,48 @@
+////----------------------------------*\
+//// SCSS FONTS
+////----------------------------------*/
+@import 'fonts/fonts';
+////----------------------------------*\
+//// SCSS MIXINS
+////----------------------------------*/
+@import 'mixins/mixins';
+////----------------------------------*\
+//// CONFIG MODULES
+////----------------------------------*/
+//// Config modules
+@import 'modules/variables';
+@import 'modules/clearfix';
+@import 'modules/defaults';
+@import 'modules/normalize';
+////----------------------------------*\
+//// PARTIALS
+////----------------------------------*/
+@import 'partials/nav';
+@import 'partials/secondaryNav';
+@import 'partials/login';
+@import 'partials/latest';
+@import 'partials/trending';
+@import 'partials/footer';
+@import 'partials/modal';
+
+//----------------------------------*\
+// OBJECTS & MODULES
+//----------------------------------*/
+//@import 'modules/typography';
+
+body {
+    background: $light-grey;
+    color: $white;
+
+    @media #{$mq-xs, $mq-sm} {
+        background: $light-grey;
+    }
+}
+
+input {
+    color: black;
+}
+
+select#repeatSelect {
+    color: black !important;
+}

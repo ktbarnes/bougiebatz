@@ -1,20 +1,17 @@
 var mongoose = require('mongoose');
+var mongodb = require('mongodb');
 
-var dbUrl = 'mongodb://root:root@ds153715.mlab.com:53715/heroku_wbq232wz';
+var dbUrl = process.env.MONGOLAB_OLIVE_URI || 'mongodb://heroku_51kstk8r:mvc2uaain1ktom8tretqv5b5si@ds139665.mlab.com:39665/heroku_51kstk8r';
 
-//connect to remote mongodb database
-var db = mongoose.connect(dbUrl, function(err, res){
-  if (err) {
-    console.error('Error connecting to: ' + dbUrl);
-  } else {
-    console.log('Connected to ' + dbUrl);
-  }
+mongoose.connect(dbUrl, function (err, res) {
+  if (err) console.error('ERROR connecting to: ' + dbUrl + '. ' + err)
+  else console.log('Successfully connected to: ' + dbUrl)
 });
 
-//attach listener to connected evenet
-mongoose.connection.once('connected', function(){
-  console.log('Connected to database');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function () {
+  console.log('Mongodb connection open');
 });
 
-//export db
 module.exports = db;

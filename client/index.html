@@ -1,18 +1,45 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='UTF-8'>
-    <title> Visual News </title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css'>
-    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="/styles/style.css">
-   </head>
-<body>
-  <main class="container">
-  <!-- <h1> News </h1> -->
-  	<div id="treetop"></div>
-  <main>
+  <html ng-app='legacyOwls'>
+    <head>
+      <meta charset="utf-8">
+      <title>Legacy Owls.</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <script src='/public/bundle.js'></script>
-</body>
-</html>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+            integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/yeti/bootstrap.min.css" rel="stylesheet">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+      <script src="https://use.fontawesome.com/61050b9888.js"></script>
+      <link href="assets/js/angular-material.min.css">
+      <link rel="stylesheet" href="assets/js/font-awesome-animation.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    </head>
+    <body>
+      <div ng-view></div>
+
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+              integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+              integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+              crossorigin="anonymous"></script>
+      <script src="assets/js/angular.js"></script>
+      <script src="assets/js/angular-animate.min.js"></script>
+      <script src="assets/js/angular-aria.min.js"></script>
+      <script src="assets/js/angular-material.min.js"></script>
+      <script src="assets/js/angular-mocks.js"></script>
+      <script src="assets/js/angular-route.min.js"></script>
+      <script src="assets/js/angular-modal-service.js"></script>
+      <script src="assets/js/angular-pageslide-directive.js"></script>
+      <script src="app/app.js"></script>
+      <script src="app/factory_functions/factory.js"></script>
+      <script src="app/auth/controllers.js"></script>
+      <script src="app/latest/latest.js"></script>
+      <script src="app/savedStory/savedStory.js"></script>
+      <script src="app/modal/modalController.js"></script>
+      <script src="app/trending/trending.js"></script>
+      <script src="app/comment/comment.js"></script>
+
+    </body>
+  </html>

@@ -1,0 +1,45 @@
+.modal {
+    text-align: center;
+    margin: 0 auto;
+    float: none;
+    color: $navy;
+
+    .modal-dialog {
+
+        h4 {
+            margin-top: 25px;
+        }
+
+        .modal-body {
+            padding: 20px 20px 0px 20px;
+
+            img {
+                width: 100%;
+                max-width: 1200px;
+                margin-bottom: 25px;
+            }
+
+            a.enabled {
+                @include whiteButton($navy, $light-grey);
+                display: block;
+                margin: 0 auto;
+                margin-top: 10px;
+            }
+
+            a.disabled {
+                display: block;
+                margin: 0 auto;
+                @include disabledButton($navy, $light-grey);
+            }
+        }
+
+    }
+
+    .modal-footer {
+        text-align: center;
+        button {
+            @include whiteButton($navy, $light-grey);
+        }
+    }
+
+}

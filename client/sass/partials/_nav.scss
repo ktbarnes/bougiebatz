@@ -1,0 +1,54 @@
+@import '../modules/variables';
+
+header.navigation {
+    position: absolute;
+    z-index: 1000;
+    //background-color: $light-charcoal;
+    height: 100px;
+}
+
+header.navigation2 {
+    top: 0;
+    z-index: 1000;
+    background-color: $light-charcoal;
+    height: 100px;
+}
+
+.heading {
+    font-family: $canterbury;
+    text-align: center;
+    font-size: 60px;
+    padding-top: 12px;
+
+    @media #{$mq-xs} {
+        display: none;
+    }
+}
+
+.logo {
+    display: inline-block;
+    padding-top: 5px;
+
+    img {
+        width: 85px;
+    }
+
+}
+
+.logout {
+    float: right;
+    padding-top: 20px;
+
+    a {
+        @include whiteButton($white, $light-charcoal);
+    }
+}
+
+.switchPage {
+    float: right;
+    padding-top: 20px;
+
+    a {
+        @include whiteButton($white, $light-charcoal);
+    }
+}

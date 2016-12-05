@@ -1,0 +1,56 @@
+@import '../modules/variables';
+
+@mixin vertical-center-flex($height) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $height;
+}
+
+@mixin whiteButton($color, $color2) {
+    border: 2px solid $color;
+    background: none;
+    color: $color;
+    border-radius: 25px;
+    width: 150px;
+    margin-top: 10px;
+
+    &:hover {
+        background: $color;
+        color: $color2;
+        border: 2px solid white;
+    }
+}
+
+@mixin currentHover($color, $color2) {
+    border: 2px solid $color;
+    background: $color;
+    color: $color2;
+    border-radius: 25px;
+    width: 150px;
+    margin-top: 10px;
+
+    &:hover {
+        background: none;
+        color: $color2;
+        border: 2px solid white;
+    }
+}
+
+@mixin currentButton($color, $color2) {
+    border: 2px solid $color;
+    background: $color;
+    color: $color2;
+    border-radius: 25px;
+    width: 150px;
+    margin-top: 10px;
+}
+
+@mixin disabledButton($color, $color2) {
+    border: 2px solid $color;
+    background: none;
+    color: $color;
+    border-radius: 25px;
+    width: 150px;
+    margin-top: 10px;
+}
